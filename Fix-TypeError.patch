@@ -1,0 +1,12 @@
+diff --git a/src/EventDispatcher/TraceableEventDispatcher.php b/src/EventDispatcher/TraceableEventDispatcher.php
+index 8ab4b5a..22bd112 100644
+--- a/src/EventDispatcher/TraceableEventDispatcher.php
++++ b/src/EventDispatcher/TraceableEventDispatcher.php
+@@ -81,6 +81,7 @@ class TraceableEventDispatcher extends ContainerAwareEventDispatcher implements
+       $event_name = $swap;
+     }
+     else {
++      return false;
+       throw new \TypeError(sprintf('Argument 1 passed to "%s::dispatch()" must be an object, %s given.', ContractsEventDispatcherInterface::class, \gettype($event)));
+     }
+ 
