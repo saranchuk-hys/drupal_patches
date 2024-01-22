@@ -1,0 +1,13 @@
+diff --git a/core/lib/Drupal/Core/Extension/Extension.php b/core/lib/Drupal/Core/Extension/Extension.php
+index 8ad50a56..0f931360 100644
+--- a/core/lib/Drupal/Core/Extension/Extension.php
++++ b/core/lib/Drupal/Core/Extension/Extension.php
+@@ -150,7 +150,7 @@ class Extension {
+    */
+   public function load() {
+     if ($this->filename) {
+-      include_once $this->root . '/' . $this->getPath() . '/' . $this->filename;
++      include_once "{$this->root}/{$this->getPath()}/{$this->filename}";
+       return TRUE;
+     }
+     return FALSE;
